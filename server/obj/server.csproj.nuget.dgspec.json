@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj": {}
+    "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj": {
+    "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
+        "projectUniqueName": "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
+        "projectPath": "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
         "packagesPath": "C:\\Users\\bclifton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\obj\\",
+        "outputPath": "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bclifton\\AppData\\Roaming\\NuGet\\NuGet.Config",

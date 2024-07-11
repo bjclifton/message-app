@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "43ipMP0DCwA=",
+  "dgSpecHash": "Qwme/wtxf2M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
+  "projectFilePath": "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bclifton\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\bclifton\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

@@ -158,3 +158,4 @@ c:\Users\bclifton\Documents\WebDev\message-app\server\bin\Debug\net8.0\IdentityS
 c:\Users\bclifton\Documents\WebDev\message-app\server\bin\Debug\net8.0\IdentityServer4.Storage.dll
 c:\Users\bclifton\Documents\WebDev\message-app\server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 c:\Users\bclifton\Documents\WebDev\message-app\server\bin\Debug\net8.0\Newtonsoft.Json.dll
+c:\Users\bclifton\Documents\WebDev\message-app\server\bin\Debug\net8.0\BCrypt.Net-Next.dll
