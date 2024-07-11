@@ -12,6 +12,17 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder
+            .WithOrigins("http://localhost:5173") // Change to your front-end URL
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials());
+});
+
 // Add vaultsettings.json
 builder.Configuration.AddJsonFile("vaultsettings.json", optional: true, reloadOnChange: true);
 
@@ -56,6 +67,10 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = string.Empty; // Serve Swagger UI at the app's root
     });
 }
+
+// Use CORS
+app.UseCors("AllowSpecificOrigin");
+
 
 app.UseHttpsRedirection();
 app.UseRouting();

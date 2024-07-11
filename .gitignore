@@ -1,0 +1,7 @@
+server/vaultsettings.json
+server/certificate.crt
+client/node_modules/
+server/bin/
+server/obj/
+
+

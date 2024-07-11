@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../scripts/api';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -18,16 +18,20 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const defaultTheme = createTheme();
 
 function SignIn() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await loginUser({ username, password });
+      var user = {
+        username: username,
+        password: password,
+      }
+      const response = await loginUser(user);
       // Assuming login successful, redirect to success page
-      history.push('/success');
+      navigate('/success')
     } catch (error) {
       console.error('Login error:', error);
       // Handle login error
