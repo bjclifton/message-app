@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "bPM3oW4apA4=",
+  "dgSpecHash": "43ipMP0DCwA=",
   "success": true,
-  "projectFilePath": "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
+  "projectFilePath": "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bclifton\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\bclifton\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\bclifton\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\bclifton\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\bclifton\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\bclifton\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\bclifton\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\bclifton\\.nuget\\packages\\identitymodel\\4.4.0\\identitymodel.4.4.0.nupkg.sha512",

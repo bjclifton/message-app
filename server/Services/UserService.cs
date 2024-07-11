@@ -17,19 +17,25 @@ namespace server.Services
       _usersCollection = database.GetCollection<User>("Users");
     }
 
-    public async Task<List<User>> GetAsync() =>
+    public async Task<List<User>> GetAll() =>
       await _usersCollection.Find(user => true).ToListAsync();
 
-    public async Task<User> GetAsync(string id) =>
+    public async Task<User> GetByID(string id) =>
       await _usersCollection.Find<User>(user => user.Id == id).FirstOrDefaultAsync();
 
-    public async Task CreateAsync(User newUser) =>
+    public async Task<User> GetByUsername(string username) =>
+      await _usersCollection.Find<User>(user => user.Username == username).FirstOrDefaultAsync();
+
+    public async Task<User> GetByEmail(string email) =>
+      await _usersCollection.Find<User>(user => user.Email == email).FirstOrDefaultAsync();
+
+    public async Task Create(User newUser) =>
       await _usersCollection.InsertOneAsync(newUser);
 
-    public async Task UpdateAsync(string id, User userIn) =>
+    public async Task Update(string id, User userIn) =>
       await _usersCollection.ReplaceOneAsync(user => user.Id == id, userIn);
 
-    public async Task RemoveAsync(string id) =>
+    public async Task Remove(string id) =>
       await _usersCollection.DeleteOneAsync(user => user.Id == id);
   }
 

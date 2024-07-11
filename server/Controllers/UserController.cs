@@ -23,7 +23,7 @@ namespace server.Controllers
         /// <returns>List of users.</returns>
         [HttpGet]
         public async Task<ActionResult<List<User>>> Get() =>
-            await _userService.GetAsync();
+            await _userService.GetAll();
 
         /// <summary>
         /// Gets a specific user by ID.
@@ -33,13 +33,31 @@ namespace server.Controllers
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<User>> Get(string id)
         {
-            var user = await _userService.GetAsync(id);
+            var user = await _userService.GetByID(id);
             if (user == null)
             {
                 return NotFound();
             }
             return user;
         }
+
+        /// <summary>
+        /// Gets a specific user by username.
+        /// </summary>
+        /// <param name="username">The username of the user.</param>
+        /// <returns>The user with the specified username.</returns>
+        [HttpGet("{username}")]
+        public async Task<ActionResult<User>> GetByUsername(string username)
+        {
+            var user = await _userService.GetByUsername(username);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return user;
+        }
+
+
 
         /// <summary>
         /// Creates a new user.
@@ -49,7 +67,7 @@ namespace server.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(User user)
         {
-            await _userService.CreateAsync(user);
+            await _userService.Create(user);
             return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
         }
 
@@ -62,12 +80,12 @@ namespace server.Controllers
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, User updatedUser)
         {
-            var user = await _userService.GetAsync(id);
+            var user = await _userService.GetByID(id);
             if (user == null)
             {
                 return NotFound();
             }
-            await _userService.UpdateAsync(id, updatedUser);
+            await _userService.Update(id, updatedUser);
             return NoContent();
         }
 
@@ -79,12 +97,12 @@ namespace server.Controllers
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {
-            var user = await _userService.GetAsync(id);
+            var user = await _userService.GetByID(id);
             if (user == null)
             {
                 return NotFound();
             }
-            await _userService.RemoveAsync(user.Id);
+            await _userService.Remove(user.Id);
             return NoContent();
         }
     }

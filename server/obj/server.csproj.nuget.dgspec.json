@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj": {}
+    "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj": {}
   },
   "projects": {
-    "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj": {
+    "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
+        "projectUniqueName": "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
+        "projectPath": "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\server.csproj",
         "packagesPath": "C:\\Users\\bclifton\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\obj\\",
+        "outputPath": "C:\\Users\\bclifton\\Documents\\WebDev\\message-app\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bclifton\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "IdentityServer4": {
               "target": "Package",
               "version": "[4.1.2, )"
