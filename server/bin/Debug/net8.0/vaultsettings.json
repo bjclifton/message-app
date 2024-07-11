@@ -1,0 +1,7 @@
+{
+  "MongoDB": {
+    "ConnectionString": "mongodb+srv://bclifton:wxJ#3colk5@socialmedia.fngm024.mongodb.net/?retryWrites=true&w=majority&appName=SocialMedia",
+    "DatabaseName": "SocialMedia"
+  }
+}
+
