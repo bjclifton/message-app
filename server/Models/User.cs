@@ -10,21 +10,22 @@ namespace server.Models
     public string Id { get; set; }
 
     [BsonElement("username")]
-    public required string Username { get; set; }
+    public string Username { get; set; }
 
     [BsonElement("email")]
-    public required string Email { get; set; }
+    public string Email { get; set; }
 
     [BsonElement("passwordHash")]
     public string PasswordHash { get; set; }
 
+    [BsonElement("password")]
     public string Password { get; set; }
 
     [BsonElement("createdAt")]
-    public required DateTime CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     [BsonElement("updatedAt")]
-    public required DateTime UpdatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
   }
 }
 

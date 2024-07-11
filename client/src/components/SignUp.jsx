@@ -12,6 +12,7 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { registerUser } from '../scripts/api';
 
 const defaultTheme = createTheme();
 
@@ -25,6 +26,23 @@ function SignUp() {
     event.preventDefault();
     try {
       // Handle form submission or API call to register user
+      var user = {
+        email: email,
+        password: password,
+        username: '',
+        id: '',
+        passwordHash: '',
+      };
+
+      const response = await registerUser(user);
+      // If bad request, response will have status 400
+      if (response.status === 400) {
+        // Handle bad request
+        console.error('Registration error:', response);
+        return;
+      }
+      console.log('Registration response:', response);
+      Navigate('/SignIn')
     } catch (error) {
       console.error('Registration error:', error);
       // Handle registration error

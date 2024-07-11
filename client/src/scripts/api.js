@@ -1,6 +1,6 @@
 // api.js
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'http://localhost:5000/api/auth';
 
 export async function registerUser(user) {
     const response = await fetch(`${BASE_URL}/register`, {
@@ -23,3 +23,4 @@ export async function loginUser(user) {
     });
     return await response.json();
 }
+

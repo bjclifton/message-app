@@ -17,7 +17,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
         builder => builder
-            .WithOrigins("http://localhost:5173") // Change to your front-end URL
+            .WithOrigins("http://localhost:5175") // Change to your front-end URL
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials());
@@ -41,12 +41,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-
 // Configure MongoDB settings
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDB"));
 
-// Add services to the container
-builder.Services.AddSingleton<UserService>();
+// Add IUserService
+builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddControllers(); // Add controllers
 
 // Configure Swagger/OpenAPI
@@ -70,7 +69,6 @@ if (app.Environment.IsDevelopment())
 
 // Use CORS
 app.UseCors("AllowSpecificOrigin");
-
 
 app.UseHttpsRedirection();
 app.UseRouting();

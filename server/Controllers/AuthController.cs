@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using server.Models;
 using server.Services;
 
-
 namespace server.Controllers;
 
 [ApiController]
@@ -30,20 +29,11 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] User user)
     {
-
-        // Check if user with the same username or email already exists, send back appropriate response
-        var existingUser = await _userService.GetByUsername(user.Username);
-        if (existingUser != null)
-        {
-            return BadRequest("User with this username already exists");
-        }
-
-        existingUser = await _userService.GetByEmail(user.Email);
+        var existingUser = await _userService.GetByEmail(user.Email);
         if (existingUser != null)
         {
             return BadRequest("User with this email already exists");
         }
-
 
         user.PasswordHash = HashPassword(user.Password);
         user.Password = null;
@@ -58,7 +48,7 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] User user)
     {
-        var existingUser = await _userService.GetByUsername(user.Username);
+        var existingUser = await _userService.GetByEmail(user.Email);
 
         if (existingUser == null)
         {
@@ -109,3 +99,4 @@ public class AuthController : ControllerBase
     }
 
 }
+

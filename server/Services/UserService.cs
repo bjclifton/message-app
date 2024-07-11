@@ -7,7 +7,7 @@ using System.Diagnostics.Eventing.Reader;
 
 namespace server.Services
 {
-  public class UserService
+  public class UserService : IUserService
   {
     private readonly IMongoCollection<User> _usersCollection;
     public UserService(IOptions<MongoDbSettings> settings)
